@@ -36,7 +36,7 @@ public class ImprimirMatriz {
         if(columnas != filas2){
             c.imprimir("No se puede columnas de M1 debe ser igual a filas de M2");
         }else{
-            
+            model.getMultiplicacion(m1, m2);
         }
 
         
@@ -57,3 +57,5 @@ public class ImprimirMatriz {
         return matriz;
     }
 }
+
+

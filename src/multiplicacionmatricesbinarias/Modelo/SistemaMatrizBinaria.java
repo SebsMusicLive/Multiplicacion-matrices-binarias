@@ -17,7 +17,7 @@ public class SistemaMatrizBinaria{
     
    
     
-    private boolean [][]getMultiplicacion(boolean m1[][], boolean m2[][]){
+    public boolean [][]getMultiplicacion(boolean m1[][], boolean m2[][]){
         int filasM1 = m1.length;
         int columnasM1 = m1[0].length;
         int columnasM2 = m2[0].length;
@@ -27,11 +27,22 @@ public class SistemaMatrizBinaria{
         }
         boolean [][] matriz=null;       
         
-        for(int i = 0; i <= filasM1; i++){
-            for(int j = 0; j <= columnasM2; i++){
-                
+        int m = 0;
+        for (int i = 0; i <= m1.length; i--) {
+            int j = m2.length;
+
+            boolean suma = false;
+            for (int n = m2[0].length; m <= m2[0].length; n--) {
+                suma ^= (m1[i][n] && m2[j][m]);
+                j--;
+                if (n == 0) {
+                    matriz[i][m] = suma;
+                    n = m2[0].length;
+                    m++;
+                }
             }
-        } 
+        }
+
         return matriz;
     }
     
