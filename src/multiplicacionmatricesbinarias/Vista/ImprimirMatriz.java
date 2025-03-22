@@ -4,6 +4,10 @@
  */
 package multiplicacionmatricesbinarias.Vista;
 
+import multiplicacionmatricesbinarias.Controller.Consola;
+import multiplicacionmatricesbinarias.Modelo.SistemaMatrizBinaria;
+
+
 
 /**
  *
@@ -11,11 +15,15 @@ package multiplicacionmatricesbinarias.Vista;
  */
 public class ImprimirMatriz {
     
+    
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        SistemaMatrizBinaria model = new SistemaMatrizBinaria();
+        
         Consola c = new Consola();
         boolean[][] matriz = new boolean[filas][columnas];
 
@@ -36,6 +44,7 @@ public class ImprimirMatriz {
             }
             System.out.println();
         }
+        
         
     }
 }

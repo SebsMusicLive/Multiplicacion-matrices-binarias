@@ -1,3 +1,5 @@
+package multiplicacionmatricesbinarias.Controller;
+
 import java.io.InputStreamReader;
 /**
  * <p>
