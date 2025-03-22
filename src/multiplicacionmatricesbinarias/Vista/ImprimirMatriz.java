@@ -4,10 +4,18 @@
  */
 package multiplicacionmatricesbinarias.Vista;
 
+
 /**
  *
  * @author nn
  */
-public class Main {
+public class ImprimirMatriz {
     
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+               
+    }
 }

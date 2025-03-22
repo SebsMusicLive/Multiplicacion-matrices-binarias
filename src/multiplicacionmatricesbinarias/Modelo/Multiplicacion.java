@@ -8,13 +8,7 @@ package multiplicacionmatricesbinarias.Modelo;
  *
  * @author Sebastian
  */
-public class MultiplicacionMatricesBinarias {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public class Multiplicacion{
+         
     
 }
