@@ -18,13 +18,20 @@ public class SistemaMatrizBinaria{
    
     
     private boolean [][]getMultiplicacion(boolean m1[][], boolean m2[][]){
-        boolean [][] matriz=null;
+        int filasM1 = m1.length;
+        int columnasM1 = m1[0].length;
+        int columnasM2 = m2[0].length;
         
-        if(m1.length != m2[0].length || m2.length != m1[0].length){
+        if(filasM1 != columnasM2){
             throw new IllegalArgumentException("Error al multiplicar las matrices");
         }
+        boolean [][] matriz=null;       
         
-        
+        for(int i = 0; i <= filasM1; i++){
+            for(int j = 0; j <= columnasM2; i++){
+                
+            }
+        } 
         return matriz;
     }
     
