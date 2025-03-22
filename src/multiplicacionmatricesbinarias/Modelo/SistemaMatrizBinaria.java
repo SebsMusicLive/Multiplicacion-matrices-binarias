@@ -19,6 +19,12 @@ public class SistemaMatrizBinaria{
     
     private boolean [][]getMultiplicacion(boolean m1[][], boolean m2[][]){
         boolean [][] matriz=null;
+        
+        if(m1.length != m2[0].length || m2.length != m1[0].length){
+            throw new IllegalArgumentException("Error al multiplicar las matrices");
+        }
+        
+        
         return matriz;
     }
     
