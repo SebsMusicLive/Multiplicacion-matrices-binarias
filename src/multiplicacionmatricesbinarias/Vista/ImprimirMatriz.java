@@ -1,7 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
+
 package multiplicacionmatricesbinarias.Vista;
 
 import multiplicacionmatricesbinarias.Controller.Consola;
@@ -25,18 +23,37 @@ public class ImprimirMatriz {
         SistemaMatrizBinaria model = new SistemaMatrizBinaria();
         Consola c = new Consola();
         
-        byte filas = c.leerByte("Numero de filas de Matriz 1: ");
-        byte columnas = c.leerByte("Numero de Columnasde Matriz 1: ");
+        byte filas = 5;//c.leerByte("Numero de filas de Matriz 1: ");
+        byte columnas = 4; // c.leerByte("Numero de Columnasde Matriz 1: ");
         boolean[][] m1 = generarMatrizEnteros(filas, columnas);
                
-        byte filas2 = c.leerByte("Numero de filas de Matriz 2: ");
-        byte columnas2 = c.leerByte("Numero de Columnasde Matriz 2: ");
+        byte filas2 = 4;//c.leerByte("Numero de filas de Matriz 2: ");
+        byte columnas2 = 3; //c.leerByte("Numero de Columnasde Matriz 2: ");
         boolean[][] m2 = generarMatrizEnteros(filas2, columnas2);
         
         if(columnas != filas2){
             c.imprimir("No se puede columnas de M1 debe ser igual a filas de M2");
         }else{
-            model.getMultiplicacion(m1, m2);
+            
+              // Imprimir la matriz
+        System.out.println("Matriz generada1:");
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
+                System.out.print(m1[i][j] ? "1 " : "0 "); // Mostrar 1 para true y 0 para false
+            }
+            System.out.println();
+        }
+           
+           // Imprimir la matriz
+        System.out.println("Matriz generada2:");
+        for (int i = 0; i < filas2; i++) {
+            for (int j = 0; j < columnas2; j++) {
+                System.out.print(m2[i][j] ? "1 " : "0 "); // Mostrar 1 para true y 0 para false
+            }
+            System.out.println();
+        }
+        
+        boolean [][] mr = model.getMultiplicacion(m1,m2);
         }
 
         
@@ -48,14 +65,13 @@ public class ImprimirMatriz {
         boolean[][] matriz = new boolean[filas][columnas];
         
         for (int i = 0; i < filas; i++) {
-            for (int j = 0; j < columnas; j++) {
-                int valor = i * columnas + j;
-                matriz[i][j] = ((valor >> (columnas - 1 - j)) & 1) == 1;
+            int valor = i; 
+            for (int j = columnas - 1; j >= 0; j--) {
+                matriz[i][j] = (valor & 1) == 1;
+                valor = valor >> 1;
             }
         }
         
         return matriz;
     }
 }
-
-
