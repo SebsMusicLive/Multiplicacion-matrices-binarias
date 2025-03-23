@@ -577,4 +577,8 @@ public class Consola {
             System.out.print(arreglo[i]+(i!=arreglo.length-1?" ":"\n"));
     }            
 
+    public void imprimir(boolean n) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 }//fin clase Consola

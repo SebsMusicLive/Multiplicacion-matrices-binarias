@@ -22,6 +22,8 @@ public class ImprimirMatriz {
         // TODO code application logic here
         SistemaMatrizBinaria model = new SistemaMatrizBinaria();
         Consola c = new Consola();
+        boolean n = true && true ;
+        System.out.println(n);
         
         byte filas = 5;//c.leerByte("Numero de filas de Matriz 1: ");
         byte columnas = 4; // c.leerByte("Numero de Columnasde Matriz 1: ");
@@ -65,7 +67,7 @@ public class ImprimirMatriz {
         }
 
         
-        
+     
     }
     
     public static boolean[][] generarMatrizEnteros(byte filas, byte columnas) {
