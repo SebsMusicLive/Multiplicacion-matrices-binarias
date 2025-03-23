@@ -54,6 +54,14 @@ public class ImprimirMatriz {
         }
         
         boolean [][] mr = model.getMultiplicacion(m1,m2);
+         System.out.println("Final:");
+        for (int i = 0; i <= mr.length-1; i++) {
+            for (int j = 0; j <= mr[0].length-1; j++) {
+                System.out.print(mr[i][j] ? "1 " : "0 "); // Mostrar 1 para true y 0 para false
+            }
+            System.out.println();
+        }
+        
         }
 
         
